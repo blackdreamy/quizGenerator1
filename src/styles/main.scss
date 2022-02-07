@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+html, body {
+	height:100%;
+	width:100%;
+	font-family: 'Poppins', sans-serif !important;
+	color:#222 !important;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.navbar {
+	padding: .8rem;
+}
+.navbar-nav li {
+	padding-right:20px;
+}
+.nav-link {
+	font-size: 1.1em !important;
+}
+.carousel-inner img {
+	width:100%;
+}
+.carousel-caption {
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+
+	h1 {
+		font-size:500%;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 10px #000;
+	}
+	h3 {
+		font-size: 200%;
+		font-weight:500;
+		text-shadow: 1px 1px 10px #000;
+		padding-bottom: 1rem;
+	}
+}
+.btn-primary {
+	background-color: #ff758c !important;
+	border: 1px solid #ff758c !important;
+	&:hover {
+		background-color: #ff7eb3 !important;
+		border: 1px solid #ff7eb3 !important;
+	}
+}
+.wrapper {
+	@include flexCenter();
+}
+.quizContainer {
+	padding-top:2rem;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content: space-between;
+}
+.question {
+	height: 250px;
+	width:400px;
+	border: black solid 1px;
+	.buttonNext {
+		margin-left:42%;
+	}
+}
+
+.menubuttons {
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content: space-between;
+	.btn {
+		margin:20px;
+	}
+}
+.questionWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content: space-between;
+}
+
+.hidden {
+	visibility:hidden
+}
+.visible {
+	visibility:visible;
+}
+
+
+hr {
+	border: 0;
+	clear:both;
+	display:block;
+	width: 96%;
+	color: #FFFF00;
+	height: 1px;
+}
+
+.padding {
+	padding-bottom: 2rem;
+}
+.howto {
+	padding-top: 2rem;
+	width:75% !important;
+	margin: 0 auto !important;
+	hr {
+		border-top: 2px solid #b4b4b4;
+		width:95%;
+		margin-top: .3rem;
+		margin-bottom:1rem;
+	}
+}
+
+.fa {
+	font-size:7em !important;
+	padding-bottom:3rem;
+	background: linear-gradient(90deg, rgba(255,117,140,1) 35%, rgba(255,126,179,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rc-progress-line {
+	width:250px;
+
+}
+
+footer {
+	background-color:#f8f9fa;
+	padding-top:2rem;
+}
+
+.logout {
+	padding-top:1rem;
+	padding-right:2rem;
+}
+.mg {
+	margin-bottom:1rem;
+}
+.in {
+	margin-bottom:.5rem;
+}
+.centerMe {
+	@include flexCenter();
+}
+.login-padding{
+	padding:10rem;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+	.carousel-caption {
+	top:45%;
+
+	h1 {
+		font-size:350%;
+	}
+	h3 {
+		font-size: 140%;
+		font-weight:400;
+		padding-bottom: .2rem;
+	}
+	.btn {
+		font-size:95%;
+		padding: 8px 14px;
+	}
+}
+  }
+@media (max-width: 768px) {
+  .carousel-caption {
+	top:45%;
+
+	h1 {
+		font-size:300%;
+	}
+	h3 {
+		font-size: 140%;
+		font-weight:400;
+		padding-bottom: .2rem;
+	}
+	.btn {
+		font-size:95%;
+		padding: 8px 14px;
+	}
+}
+}
+@media (max-width: 576px) {
+  .carousel-caption {
+	top:40%;
+
+	h1 {
+		font-size:250%;
+	}
+	h3 {
+		font-size: 110%;
+	}
+	.btn {
+		font-size:90%;
+		padding: 4px 8px;
+	}
+}
+	.carousel-indicators{
+		display:none !important;
+	}
+}
+
+
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
